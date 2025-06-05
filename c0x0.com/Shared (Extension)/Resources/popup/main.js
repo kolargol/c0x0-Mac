@@ -137,7 +137,7 @@ async function createForm(){
   childElementForm.setAttribute('class', 'input-group mt-3 mb-3');
   childElementForm.innerHTML = "<div class=\"input-group-prepend\">" +
     "<span class=\"input-group-text\">Name</span></div>" +
-    "<input id=\"newalias\" \"type=\"text\" class=\"form-control bg-light text-center\" placeholder=\"description\"></div>";
+    "<input id=\"newalias\" type=\"text\" class=\"form-control bg-light text-center\" placeholder=\"description\"></div>";
   parentElement.appendChild(childElementForm);
 
   /* Append placeholder */
@@ -242,7 +242,7 @@ async function listAliasesScope(scope) {
         var childElementBody = document.createElement('div');
         childElementBody.setAttribute('class', 'card-body p-1');
         childElementBody.innerHTML = "<strong>" + safeEscape(alias.tag) + "</strong><br>" + aliasStatus +
-          "<div class=\"input-group\"><input id=\"btn" + safeEscape(alias.alias_id) + "\"type=\"text\" class=\"form-control bg-light text-center text-monospace\" readonly value=\"" + safeEscape(alias.alias) +"\">" +
+          "<div class=\"input-group\"><input id=\"btn" + safeEscape(alias.alias_id) + "\" type=\"text\" class=\"form-control bg-light text-center text-monospace\" readonly value=\"" + safeEscape(alias.alias) +"\">" +
           "<div class=\"input-group-append\"><button class=\"btn btn-primary\" type=\"button\" data-clipboard-target=\"#btn" + safeEscape(alias.alias_id) + "\">Copy</button></div></div>";
         childElement.appendChild(childElementBody);
       }
